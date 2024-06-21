@@ -9,18 +9,32 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="hello world
-![Uploading 1704551529440a4d2bba9edf0ae6cd447fd819b5c699e7e11.jpg…]()
-。">
+<meta name="description" content="# 测试一级标题
+## 测试二级标题
+### 测试三级标题
+```python
+#测试
+
+import serial
+import serial.tools.list_ports
+
+# 获取所有串口设备实例。">
 <meta property="og:title" content="可靠的ly0411测试">
-<meta property="og:description" content="hello world
-![Uploading 1704551529440a4d2bba9edf0ae6cd447fd819b5c699e7e11.jpg…]()
-。">
+<meta property="og:description" content="# 测试一级标题
+## 测试二级标题
+### 测试三级标题
+```python
+#测试
+
+import serial
+import serial.tools.list_ports
+
+# 获取所有串口设备实例。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://reliable-ly0411.github.io/post/ke-kao-de-ly0411-ce-shi.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/125791929?s=400&u=22c4fc7ae731d94721c50ead99fb7909e252ad84&v=4">
 <title>可靠的ly0411测试</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 </head>
 <style>
@@ -58,7 +72,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/reliable-ly0411/reliable-ly0411.github.io/issues/1" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/reliable-ly0411/reliable-ly0411.github.io/issues/3" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -74,8 +88,37 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>hello world<br>
-<a target="_blank" rel="noopener noreferrer" href=""><img src="" alt="Uploading 1704551529440a4d2bba9edf0ae6cd447fd819b5c699e7e11.jpg…" style="max-width: 100%;"></a></p></div>
+<div class="markdown-body" id="postBody"><h1>测试一级标题</h1>
+<h2>测试二级标题</h2>
+<h3>测试三级标题</h3>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c">#测试</span>
+
+<span class="pl-k">import</span> <span class="pl-s1">serial</span>
+<span class="pl-k">import</span> <span class="pl-s1">serial</span>.<span class="pl-s1">tools</span>.<span class="pl-s1">list_ports</span>
+
+<span class="pl-c"># 获取所有串口设备实例。</span>
+<span class="pl-c"># 如果没找到串口设备，则输出：“无串口设备。”</span>
+<span class="pl-c"># 如果找到串口设备，则依次输出每个设备对应的串口号和描述信息。</span>
+<span class="pl-s1">ports_list</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-s1">serial</span>.<span class="pl-s1">tools</span>.<span class="pl-s1">list_ports</span>.<span class="pl-en">comports</span>())
+<span class="pl-k">if</span> <span class="pl-en">len</span>(<span class="pl-s1">ports_list</span>) <span class="pl-c1">&lt;=</span> <span class="pl-c1">0</span>:
+    <span class="pl-en">print</span>(<span class="pl-s">"无串口设备。"</span>)
+<span class="pl-k">else</span>:
+    <span class="pl-en">print</span>(<span class="pl-s">"可用的串口设备如下："</span>)
+    <span class="pl-k">for</span> <span class="pl-s1">comport</span> <span class="pl-c1">in</span> <span class="pl-s1">ports_list</span>:
+        <span class="pl-en">print</span>(<span class="pl-en">list</span>(<span class="pl-s1">comport</span>)[<span class="pl-c1">0</span>], <span class="pl-en">list</span>(<span class="pl-s1">comport</span>)[<span class="pl-c1">1</span>])</pre></div>
+<p>测试<strong>测试</strong><em>测试</em></p>
+<blockquote>
+<p>测试</p>
+</blockquote>
+<ul class="contains-task-list">
+<li>
+<p>测试</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> 测试</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/reliable-ly0411/reliable-ly0411.github.io/assets/125791929/a695c251-3987-4739-942b-6c5dcb432f12"><img src="https://github.com/reliable-ly0411/reliable-ly0411.github.io/assets/125791929/a695c251-3987-4739-942b-6c5dcb432f12" alt="1692708898468" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
