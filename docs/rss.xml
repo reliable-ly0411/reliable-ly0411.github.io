@@ -1,2 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>可靠的ly0411</title><link>https://reliable-ly0411.github.io</link><description>南晶航空大学攻城器飞行学院学生</description><copyright>可靠的ly0411</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/125791929?s=400&amp;u=22c4fc7ae731d94721c50ead99fb7909e252ad84&amp;v=4</url><title>avatar</title><link>https://reliable-ly0411.github.io</link></image><lastBuildDate>Fri, 21 Jun 2024 05:05:03 +0000</lastBuildDate><managingEditor>可靠的ly0411</managingEditor><ttl>60</ttl><webMaster>可靠的ly0411</webMaster><item><title>lllcs</title><link>https://reliable-ly0411.github.io/post/lllcs.html</link><description>hhh。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/lllcs.html</guid><pubDate>Fri, 21 Jun 2024 04:54:52 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>可靠的ly0411</title><link>https://reliable-ly0411.github.io</link><description>南晶航空大学攻城器飞行学院学生</description><copyright>可靠的ly0411</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/125791929?s=400&amp;u=22c4fc7ae731d94721c50ead99fb7909e252ad84&amp;v=4</url><title>avatar</title><link>https://reliable-ly0411.github.io</link></image><lastBuildDate>Fri, 21 Jun 2024 05:25:49 +0000</lastBuildDate><managingEditor>可靠的ly0411</managingEditor><ttl>60</ttl><webMaster>可靠的ly0411</webMaster><item><title>美好的一天</title><link>https://reliable-ly0411.github.io/post/mei-hao-de-yi-tian.html</link><description># 美好的一天&#13;
+今天真是美好的一天，天气晴朗，我也很开心&#13;
+&#13;
+## python霍夫⚪检测&#13;
+```python&#13;
+#霍夫⚪检测的简单示例&#13;
+import cv2&#13;
+import numpy as np&#13;
+&#13;
+def video_demo():&#13;
+    capture = cv2.VideoCapture(1)#0为电脑内置摄像头&#13;
+&#13;
+    k = 1&#13;
+    mindist=20&#13;
+    param1 = 50&#13;
+    param2 = 70&#13;
+    minRadius = 0&#13;
+    maxRadius = 300&#13;
+&#13;
+    while(True):&#13;
+        ret, frame = capture.read()#摄像头读取,ret为是否成功打开摄像头,true,false。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/mei-hao-de-yi-tian.html</guid><pubDate>Fri, 21 Jun 2024 05:25:26 +0000</pubDate></item><item><title>lllcs</title><link>https://reliable-ly0411.github.io/post/lllcs.html</link><description>hhh。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/lllcs.html</guid><pubDate>Fri, 21 Jun 2024 04:54:52 +0000</pubDate></item></channel></rss>
