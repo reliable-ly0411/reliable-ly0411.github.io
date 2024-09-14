@@ -230,57 +230,56 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">cv2</span>.<span class="pl-en">destroyAllWindows</span>()</pre></div>
 <h2>c++类与继承</h2>
 <h3>shapes.h</h3>
-<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
-<span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
-<span class="pl-k">class</span>  <span class="pl-en">Box</span>
+<div class="highlight highlight-source-c++"><pre class="notranslate">#include&lt;iostream&gt;
+<span class="pl-k">using</span> <span class="pl-k">namespace</span> std;
+<span class="pl-k">class</span>  Box
 {
-<span class="pl-k">public:</span>
-	<span class="pl-en">Box</span>(<span class="pl-k">float</span> l, <span class="pl-k">float</span> w, <span class="pl-k">float</span> h);
-	<span class="pl-k">float</span> <span class="pl-en">sidearea</span>();
-	<span class="pl-k">float</span> <span class="pl-en">volume</span>();
-	<span class="pl-k">void</span> <span class="pl-en">display</span>();
-	<span class="pl-c"><span class="pl-c">//</span>   friend ostream&amp; operator&lt;&lt;(ostream&amp;,Box&amp;);</span>
-<span class="pl-k">private:</span>
-	<span class="pl-k">float</span> length;
-	<span class="pl-k">float</span> width;
-	<span class="pl-k">float</span> height;
+<span class="pl-k">public</span>:
+	Box(float l, float w, float h);
+	float <span class="pl-en">sidearea</span>();
+	float <span class="pl-en">volume</span>();
+	void <span class="pl-en">display</span>();
+	//   friend ostream&amp; operator&lt;&lt;(ostream&amp;,Box&amp;);
+<span class="pl-k">private</span>:
+	float length;
+	float width;
+	float height;
 };</pre></div>
 <h3>shape.cpp</h3>
-<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">"</span>shapes.h<span class="pl-pds">"</span></span>
-<span class="pl-en">Box::Box</span>(<span class="pl-k">float</span> l, <span class="pl-k">float</span> w, <span class="pl-k">float</span> h)
+<div class="highlight highlight-source-c++"><pre class="notranslate">#include"shapes.h"
+<span class="pl-smi">Box</span>::<span class="pl-en">Box</span>(float l, float w, float h)
 {
 	length = l;
 	width = w;
 	height = h;
 }
 
-<span class="pl-k">float</span> <span class="pl-en">Box::sidearea</span>()
+float <span class="pl-smi">Box</span>::<span class="pl-en">sidearea</span>()
 {
-	<span class="pl-k">return</span>(<span class="pl-c1">2</span> * (length * width + length * height + width * height));
+	return(2 * (length * width + length * height + width * height));
 }
 
-<span class="pl-k">float</span> <span class="pl-en">Box::volume</span>()
+float <span class="pl-smi">Box</span>::<span class="pl-en">volume</span>()
 {
-	<span class="pl-k">return</span>((length * width * height));
+	return((length * width * height));
 }
 
-<span class="pl-k">void</span> <span class="pl-en">Box::display</span>()
+void <span class="pl-smi">Box</span>::<span class="pl-en">display</span>()
 {
-	cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>面积=<span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-c1">sidearea</span>() &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>;体积=<span class="pl-pds">"</span></span> &lt;&lt; <span class="pl-c1">volume</span>() &lt;&lt; endl;
+	cout &lt;&lt; "面积=" &lt;&lt; sidearea() &lt;&lt; ";体积=" &lt;&lt; volume() &lt;&lt; endl;
 }</pre></div>
 <h3>main.cpp</h3>
-<div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">"</span>shapes.h<span class="pl-pds">"</span></span>
-Box box[<span class="pl-c1">3</span>] = { <span class="pl-c1">Box</span>(<span class="pl-c1">10</span>,<span class="pl-c1">10</span>,<span class="pl-c1">1</span>),<span class="pl-c1">Box</span>(<span class="pl-c1">10</span>,<span class="pl-c1">10</span>,<span class="pl-c1">10</span>) ,<span class="pl-c1">Box</span>(<span class="pl-c1">10</span>,<span class="pl-c1">10</span>,<span class="pl-c1">100</span>) };
-<span class="pl-k">int</span> <span class="pl-en">main</span>()
+<div class="highlight highlight-source-c++"><pre class="notranslate">#include"shapes.h"
+Box box[3] = { Box(10,10,1),Box(10,10,10) ,Box(10,10,100) };
+int main()
 {
-	<span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; <span class="pl-c1">3</span>; i++)
+	for (int i = 0; i &lt; 3; i++)
 	{
-		cout &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>第<span class="pl-pds">"</span></span> &lt;&lt; i + <span class="pl-c1">1</span> &lt;&lt; <span class="pl-s"><span class="pl-pds">"</span>个长方体的<span class="pl-pds">"</span></span>;
-		box[i].<span class="pl-c1">display</span>();
+		cout &lt;&lt; "第" &lt;&lt; i + 1 &lt;&lt; "个长方体的";
+		box[i].display();
 	}
-	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
-}
-</pre></div></div>
+	return 0;
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
