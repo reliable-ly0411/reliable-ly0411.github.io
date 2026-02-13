@@ -131,7 +131,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">import</span> <span class="pl-s1">numpy</span> <span class="pl-k">as</span> <span class="pl-s1">np</span>
 
 <span class="pl-k">def</span> <span class="pl-en">video_demo</span>():
-    <span class="pl-s1">capture</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-v">VideoCapture</span>(<span class="pl-c1">1</span>)<span class="pl-c">#0为电脑内置摄像头</span>
+    <span class="pl-s1">capture</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">VideoCapture</span>(<span class="pl-c1">1</span>)<span class="pl-c">#0为电脑内置摄像头</span>
 
     <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
     <span class="pl-s1">mindist</span><span class="pl-c1">=</span><span class="pl-c1">20</span>
@@ -141,45 +141,45 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-s1">maxRadius</span> <span class="pl-c1">=</span> <span class="pl-c1">300</span>
 
     <span class="pl-k">while</span>(<span class="pl-c1">True</span>):
-        <span class="pl-s1">ret</span>, <span class="pl-s1">frame</span> <span class="pl-c1">=</span> <span class="pl-s1">capture</span>.<span class="pl-en">read</span>()<span class="pl-c">#摄像头读取,ret为是否成功打开摄像头,true,false。 frame为视频的每一帧图像</span>
+        <span class="pl-s1">ret</span>, <span class="pl-s1">frame</span> <span class="pl-c1">=</span> <span class="pl-s1">capture</span>.<span class="pl-c1">read</span>()<span class="pl-c">#摄像头读取,ret为是否成功打开摄像头,true,false。 frame为视频的每一帧图像</span>
         <span class="pl-c">#frame = cv2.flip(frame, 1)#摄像头是和人对立的，将图像左右调换回来正常显示。</span>
 
         <span class="pl-c">#cv2.imshow("video", frame)</span>
         <span class="pl-s1">window_name</span> <span class="pl-c1">=</span> <span class="pl-s">'video'</span>
-        <span class="pl-s1">cv2</span>.<span class="pl-en">namedWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cv2</span>.<span class="pl-v">WINDOW_NORMAL</span>)
-        <span class="pl-s1">cv2</span>.<span class="pl-en">resizeWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-c1">480</span>, <span class="pl-c1">270</span>)
-        <span class="pl-s1">cv2</span>.<span class="pl-en">imshow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">frame</span>)
+        <span class="pl-s1">cv2</span>.<span class="pl-c1">namedWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cv2</span>.<span class="pl-c1">WINDOW_NORMAL</span>)
+        <span class="pl-s1">cv2</span>.<span class="pl-c1">resizeWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-c1">480</span>, <span class="pl-c1">270</span>)
+        <span class="pl-s1">cv2</span>.<span class="pl-c1">imshow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">frame</span>)
 
-        <span class="pl-s1">dst</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-en">medianBlur</span>(<span class="pl-s1">frame</span>, <span class="pl-c1">15</span>)  <span class="pl-c"># 中值滤波</span>
+        <span class="pl-s1">dst</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">medianBlur</span>(<span class="pl-s1">frame</span>, <span class="pl-c1">15</span>)  <span class="pl-c"># 中值滤波</span>
         <span class="pl-c"># dst = cv.pyrMeanShiftFiltering(image, 10, 98)</span>
         <span class="pl-c"># 均值迁移滤波，定义的漂移物理空间半径大小10，定义的漂移色彩空间半径大小98（必须为98，否则检测不全）</span>
-        <span class="pl-s1">cframe</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-en">cvtColor</span>(<span class="pl-s1">dst</span>, <span class="pl-s1">cv2</span>.<span class="pl-v">COLOR_BGR2GRAY</span>)
+        <span class="pl-s1">cframe</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">cvtColor</span>(<span class="pl-s1">dst</span>, <span class="pl-s1">cv2</span>.<span class="pl-c1">COLOR_BGR2GRAY</span>)
 
         <span class="pl-s1">window_name</span> <span class="pl-c1">=</span> <span class="pl-s">'gray'</span>
-        <span class="pl-s1">cv2</span>.<span class="pl-en">namedWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cv2</span>.<span class="pl-v">WINDOW_NORMAL</span>)
-        <span class="pl-s1">cv2</span>.<span class="pl-en">resizeWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-c1">480</span>, <span class="pl-c1">270</span>)
-        <span class="pl-s1">cv2</span>.<span class="pl-en">imshow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cframe</span>)
+        <span class="pl-s1">cv2</span>.<span class="pl-c1">namedWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cv2</span>.<span class="pl-c1">WINDOW_NORMAL</span>)
+        <span class="pl-s1">cv2</span>.<span class="pl-c1">resizeWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-c1">480</span>, <span class="pl-c1">270</span>)
+        <span class="pl-s1">cv2</span>.<span class="pl-c1">imshow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cframe</span>)
 
-        <span class="pl-s1">circles</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-v">HoughCircles</span>(<span class="pl-s1">cframe</span>, <span class="pl-s1">cv2</span>.<span class="pl-v">HOUGH_GRADIENT</span>, <span class="pl-c1">1</span>, <span class="pl-s1">mindist</span>, <span class="pl-s1">param1</span><span class="pl-c1">=</span><span class="pl-s1">param1</span>, <span class="pl-s1">param2</span><span class="pl-c1">=</span><span class="pl-s1">param2</span>, <span class="pl-s1">minRadius</span><span class="pl-c1">=</span><span class="pl-s1">minRadius</span>, <span class="pl-s1">maxRadius</span><span class="pl-c1">=</span><span class="pl-s1">maxRadius</span>)
+        <span class="pl-s1">circles</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">HoughCircles</span>(<span class="pl-s1">cframe</span>, <span class="pl-s1">cv2</span>.<span class="pl-c1">HOUGH_GRADIENT</span>, <span class="pl-c1">1</span>, <span class="pl-s1">mindist</span>, <span class="pl-s1">param1</span><span class="pl-c1">=</span><span class="pl-s1">param1</span>, <span class="pl-s1">param2</span><span class="pl-c1">=</span><span class="pl-s1">param2</span>, <span class="pl-s1">minRadius</span><span class="pl-c1">=</span><span class="pl-s1">minRadius</span>, <span class="pl-s1">maxRadius</span><span class="pl-c1">=</span><span class="pl-s1">maxRadius</span>)
         <span class="pl-c"># 霍夫梯度法检测圆，检测到圆心之间的最小距离20，Canny边缘检测的高阈值50，圆心检测阈值20，能检测到的最小圆和最大圆的半径为0</span>
-        <span class="pl-k">if</span> <span class="pl-s1">circles</span> <span class="pl-c1">is</span> <span class="pl-c1">not</span> <span class="pl-c1">None</span>:
-            <span class="pl-s1">circles</span> <span class="pl-c1">=</span> <span class="pl-s1">np</span>.<span class="pl-en">uint16</span>(<span class="pl-s1">np</span>.<span class="pl-en">around</span>(<span class="pl-s1">circles</span>))  <span class="pl-c"># 把circles包含的圆心和半径的值变成整数</span>
+        <span class="pl-k">if</span> <span class="pl-s1">circles</span> <span class="pl-c1"><span class="pl-c1">is</span> <span class="pl-c1">not</span></span> <span class="pl-c1">None</span>:
+            <span class="pl-s1">circles</span> <span class="pl-c1">=</span> <span class="pl-s1">np</span>.<span class="pl-c1">uint16</span>(<span class="pl-s1">np</span>.<span class="pl-c1">around</span>(<span class="pl-s1">circles</span>))  <span class="pl-c"># 把circles包含的圆心和半径的值变成整数</span>
             <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-s1">circles</span>[<span class="pl-c1">0</span>, :]:
                 <span class="pl-s1">center</span><span class="pl-c1">=</span>(<span class="pl-s1">i</span>[<span class="pl-c1">0</span>],<span class="pl-s1">i</span>[<span class="pl-c1">2</span>])
-                <span class="pl-s1">cv2</span>.<span class="pl-en">circle</span>(<span class="pl-s1">frame</span>, (<span class="pl-s1">i</span>[<span class="pl-c1">0</span>], <span class="pl-s1">i</span>[<span class="pl-c1">1</span>]), <span class="pl-s1">i</span>[<span class="pl-c1">2</span>], (<span class="pl-c1">0</span>, <span class="pl-c1">255</span>, <span class="pl-c1">0</span>), <span class="pl-c1">2</span>)  <span class="pl-c"># 画出圆</span>
-                <span class="pl-s1">cv2</span>.<span class="pl-en">circle</span>(<span class="pl-s1">frame</span>, (<span class="pl-s1">i</span>[<span class="pl-c1">0</span>], <span class="pl-s1">i</span>[<span class="pl-c1">1</span>]), <span class="pl-c1">2</span>, (<span class="pl-c1">255</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>), <span class="pl-c1">2</span>)  <span class="pl-c"># 画出圆心</span>
+                <span class="pl-s1">cv2</span>.<span class="pl-c1">circle</span>(<span class="pl-s1">frame</span>, (<span class="pl-s1">i</span>[<span class="pl-c1">0</span>], <span class="pl-s1">i</span>[<span class="pl-c1">1</span>]), <span class="pl-s1">i</span>[<span class="pl-c1">2</span>], (<span class="pl-c1">0</span>, <span class="pl-c1">255</span>, <span class="pl-c1">0</span>), <span class="pl-c1">2</span>)  <span class="pl-c"># 画出圆</span>
+                <span class="pl-s1">cv2</span>.<span class="pl-c1">circle</span>(<span class="pl-s1">frame</span>, (<span class="pl-s1">i</span>[<span class="pl-c1">0</span>], <span class="pl-s1">i</span>[<span class="pl-c1">1</span>]), <span class="pl-c1">2</span>, (<span class="pl-c1">255</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>), <span class="pl-c1">2</span>)  <span class="pl-c"># 画出圆心</span>
                 <span class="pl-en">print</span>(<span class="pl-s">'坐标'</span>,<span class="pl-s1">center</span>)
 
             <span class="pl-c">#cv2.imshow("circles", frame)</span>
             <span class="pl-s1">window_name</span> <span class="pl-c1">=</span> <span class="pl-s">'circles'</span>
-            <span class="pl-s1">cv2</span>.<span class="pl-en">namedWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cv2</span>.<span class="pl-v">WINDOW_NORMAL</span>)
-            <span class="pl-s1">cv2</span>.<span class="pl-en">resizeWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-c1">960</span>, <span class="pl-c1">540</span>)
-            <span class="pl-s1">cv2</span>.<span class="pl-en">imshow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">frame</span>)
+            <span class="pl-s1">cv2</span>.<span class="pl-c1">namedWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">cv2</span>.<span class="pl-c1">WINDOW_NORMAL</span>)
+            <span class="pl-s1">cv2</span>.<span class="pl-c1">resizeWindow</span>(<span class="pl-s1">window_name</span>, <span class="pl-c1">960</span>, <span class="pl-c1">540</span>)
+            <span class="pl-s1">cv2</span>.<span class="pl-c1">imshow</span>(<span class="pl-s1">window_name</span>, <span class="pl-s1">frame</span>)
         <span class="pl-k">else</span> :
             <span class="pl-en">print</span>(<span class="pl-s">'没有检测到圆'</span>)
 
 <span class="pl-c">#-------------------------------------------------</span>
-        <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-en">waitKey</span>(<span class="pl-s1">k</span>)
+        <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">waitKey</span>(<span class="pl-s1">k</span>)
         <span class="pl-c">#print(c)</span>
         <span class="pl-k">if</span> <span class="pl-s1">c</span><span class="pl-c1">==</span><span class="pl-c1">97</span>:<span class="pl-c">#aaaaaa</span>
             <span class="pl-s1">mindist</span><span class="pl-c1">=</span><span class="pl-s1">mindist</span><span class="pl-c1">+</span><span class="pl-c1">2</span>
@@ -227,7 +227,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c">#-----------------------------------------------------------</span>
 
 <span class="pl-en">video_demo</span>()
-<span class="pl-s1">cv2</span>.<span class="pl-en">destroyAllWindows</span>()</pre></div>
+<span class="pl-s1">cv2</span>.<span class="pl-c1">destroyAllWindows</span>()</pre></div>
 <h2>c++类与继承</h2>
 <h3>shapes.h</h3>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span><span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
@@ -300,7 +300,7 @@ if(""!=""){
     var startSite=new Date("");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>
@@ -345,6 +345,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

@@ -112,7 +112,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c"># 获取所有串口设备实例。</span>
 <span class="pl-c"># 如果没找到串口设备，则输出：“无串口设备。”</span>
 <span class="pl-c"># 如果找到串口设备，则依次输出每个设备对应的串口号和描述信息。</span>
-<span class="pl-s1">ports_list</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-s1">serial</span>.<span class="pl-s1">tools</span>.<span class="pl-s1">list_ports</span>.<span class="pl-en">comports</span>())
+<span class="pl-s1">ports_list</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-s1">serial</span>.<span class="pl-c1">tools</span>.<span class="pl-c1">list_ports</span>.<span class="pl-c1">comports</span>())
 <span class="pl-k">if</span> <span class="pl-en">len</span>(<span class="pl-s1">ports_list</span>) <span class="pl-c1">&lt;=</span> <span class="pl-c1">0</span>:
     <span class="pl-en">print</span>(<span class="pl-s">"无串口设备。"</span>)
 <span class="pl-k">else</span>:
@@ -125,7 +125,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </blockquote>
 <ul class="contains-task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> 测试</p>
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 测试</p>
 </li>
 <li>
 <p>测试</p>
@@ -151,7 +151,7 @@ if(""!=""){
     var startSite=new Date("");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>
@@ -196,6 +196,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");
