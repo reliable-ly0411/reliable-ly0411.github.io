@@ -1,2 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>可靠的ly0411</title><link>https://reliable-ly0411.github.io</link><description>南晶航空大学攻城器飞行学院学生</description><copyright>可靠的ly0411</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/125791929?s=400&amp;u=22c4fc7ae731d94721c50ead99fb7909e252ad84&amp;v=4</url><title>avatar</title><link>https://reliable-ly0411.github.io</link></image><lastBuildDate>Mon, 27 Apr 2026 17:19:19 +0000</lastBuildDate><managingEditor>可靠的ly0411</managingEditor><ttl>60</ttl><webMaster>可靠的ly0411</webMaster></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>可靠的ly0411</title><link>https://reliable-ly0411.github.io</link><description>南晶航空大学攻城器飞行学院学生</description><copyright>可靠的ly0411</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/125791929?s=400&amp;u=22c4fc7ae731d94721c50ead99fb7909e252ad84&amp;v=4</url><title>avatar</title><link>https://reliable-ly0411.github.io</link></image><lastBuildDate>Tue, 28 Apr 2026 17:44:47 +0000</lastBuildDate><managingEditor>可靠的ly0411</managingEditor><ttl>60</ttl><webMaster>可靠的ly0411</webMaster><item><title>11</title><link>https://reliable-ly0411.github.io/post/11.html</link><description>22。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/11.html</guid><pubDate>Fri, 13 Feb 2026 16:01:32 +0000</pubDate></item><item><title>1</title><link>https://reliable-ly0411.github.io/post/1.html</link><description>2。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/1.html</guid><pubDate>Sat, 22 Jun 2024 05:14:48 +0000</pubDate></item><item><title>上网不翻墙，翻墙必被抓</title><link>https://reliable-ly0411.github.io/post/shang-wang-bu-fan-qiang-%EF%BC%8C-fan-qiang-bi-bei-zhua.html</link><description>&#13;
+&#13;
+https://mp.weixin.qq.com/s/cizpaVXmVrVBUUAzBkeA7g&#13;
+![17066146725791289f26e0752a3ec8c01969e2f053e4b0542](https://github.com/reliable-ly0411/reliable-ly0411.github.io/assets/125791929/35297bd6-d5a6-4925-8655-51a3f2648d40)&#13;
+。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/shang-wang-bu-fan-qiang-%EF%BC%8C-fan-qiang-bi-bei-zhua.html</guid><pubDate>Fri, 21 Jun 2024 10:58:41 +0000</pubDate></item><item><title>测试与测试</title><link>https://reliable-ly0411.github.io/post/ce-shi-yu-ce-shi.html</link><description>出现了一些问题。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/ce-shi-yu-ce-shi.html</guid><pubDate>Fri, 21 Jun 2024 10:23:22 +0000</pubDate></item><item><title>哈基米的反应速度是薯片20的7倍</title><link>https://reliable-ly0411.github.io/post/ha-ji-mi-de-fan-ying-su-du-shi-shu-pian-20-de-7-bei.html</link><description>- [ ] https://github.com/reliable-ly0411/reliable-ly0411.github.io/assets/125791929/44c9f485-b93a-40b8-9598-0105aff1c903&#13;
+&#13;
+。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/ha-ji-mi-de-fan-ying-su-du-shi-shu-pian-20-de-7-bei.html</guid><pubDate>Fri, 21 Jun 2024 06:28:14 +0000</pubDate></item><item><title>可靠的ly0411测试</title><link>https://reliable-ly0411.github.io/post/ke-kao-de-ly0411-ce-shi.html</link><description># 测试一级标题&#13;
+## 测试二级标题&#13;
+### 测试三级标题&#13;
+```python&#13;
+#测试&#13;
+&#13;
+import serial&#13;
+import serial.tools.list_ports&#13;
+&#13;
+# 获取所有串口设备实例。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/ke-kao-de-ly0411-ce-shi.html</guid><pubDate>Fri, 21 Jun 2024 05:48:43 +0000</pubDate></item><item><title>美好的一天</title><link>https://reliable-ly0411.github.io/post/mei-hao-de-yi-tian.html</link><description># 美好的一天&#13;
+今天真是美好的一天，天气晴朗，我也很开心&#13;
+&#13;
+## python霍夫⚪检测&#13;
+```python&#13;
+#霍夫⚪检测的简单示例&#13;
+import cv2&#13;
+import numpy as np&#13;
+&#13;
+def video_demo():&#13;
+    capture = cv2.VideoCapture(1)#0为电脑内置摄像头&#13;
+&#13;
+    k = 1&#13;
+    mindist=20&#13;
+    param1 = 50&#13;
+    param2 = 70&#13;
+    minRadius = 0&#13;
+    maxRadius = 300&#13;
+&#13;
+    while(True):&#13;
+        ret, frame = capture.read()#摄像头读取,ret为是否成功打开摄像头,true,false。</description><guid isPermaLink="true">https://reliable-ly0411.github.io/post/mei-hao-de-yi-tian.html</guid><pubDate>Fri, 21 Jun 2024 05:25:26 +0000</pubDate></item></channel></rss>
